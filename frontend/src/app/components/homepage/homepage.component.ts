@@ -17,13 +17,13 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.getBooks();
   }
-
+//Requesting all the books from the service 
   getBooks() {
     this.service.getBooks().subscribe((data) => {
       this.books = data;
     });
   }
-
+//Sending the id of the book to be deleted to the service 
   deleteBook(id){
     this.service.deleteBook(id).subscribe(()=>{
       this.getBooks();

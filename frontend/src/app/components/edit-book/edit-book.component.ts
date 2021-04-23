@@ -30,10 +30,11 @@ export class EditBookComponent implements OnInit {
   //   this.location.back();
   // }
   ngOnInit(): void {
+    //getting the book id from the url 
     this.getBookID = this.activatedRoute.snapshot.paramMap.get('id');
     this.getTheBook();
   }
-
+//Submit the edited info 
   onSubmit(data: NgForm) {
     this.title = data.value.title;
     this.author = data.value.author;
@@ -46,16 +47,15 @@ export class EditBookComponent implements OnInit {
       Description: this.description,
       image: this.image,
     };
-
+ //send the edited info to the service
     this.service.editBook(this.info, this.getBookID).subscribe(() => {});
     this.router.navigateByUrl('/');
   }
 
+  //Getting one book using the book id 
   getTheBook() {
     this.service.getBook(this.getBookID).subscribe((data) => {
     this.theBook = data;
-    console.log(this.theBook.Title);
-    
     });
   }
 }
