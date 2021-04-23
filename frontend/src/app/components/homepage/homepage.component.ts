@@ -21,8 +21,6 @@ export class HomepageComponent implements OnInit {
   getBooks() {
     this.service.getBooks().subscribe((data) => {
       this.books = data;
-      console.log(this.books);
-      
     });
   }
 }

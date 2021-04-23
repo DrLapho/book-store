@@ -10,6 +10,13 @@ export class BookService {
     this.getBooks();
   }
 
+  addBook(data){
+    return this.httpClient.post(`${this.url}/books`, data).subscribe((data)=>{
+      console.log(data)
+    });
+
+  }
+
   getBooks() {
     return this.httpClient.get(`${this.url}/books`);
   }
