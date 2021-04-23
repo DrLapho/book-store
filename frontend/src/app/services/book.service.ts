@@ -12,7 +12,7 @@ export class BookService {
 
   addBook(data) {
     return this.httpClient.post(`${this.url}`, data).subscribe((data) => {
-      console.log(data);
+    
     });
   }
 
@@ -29,8 +29,6 @@ export class BookService {
   }
 
   editBook(data,id){
-    console.log(id);
-    
-    return this.httpClient.put(`${this.url}/${id}`,data);
+  return this.httpClient.put(`${this.url}/${id}`,data);
   }
 }

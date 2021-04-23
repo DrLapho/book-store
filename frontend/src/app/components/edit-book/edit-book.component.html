@@ -1,4 +1,4 @@
-<div class="min-h-screen flex items-center justify-center bg-blue-300">
+<div class="min-h-screen flex items-center justify-center bg-blue-300" >
 
     
     <div class="bg-white p-16 rounded shadow-2xl w-2/5">
@@ -23,24 +23,25 @@
       </div>
     
   
-      <form class="space-y-5" (ngSubmit)='onSubmit(f)' #f="ngForm">
+      <form *ngIf="theBook" class="space-y-5" (ngSubmit)='onSubmit(f)' #f="ngForm">
         <div>
           <label class="block mb-1 font-bold text-gray-500" >Title of the book</label>
-          <input type="text" ngModel name='title' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700">
+          <input ngModel type="text"  name="title" class="w-full border-2 border-gray-200 p-3 rounded  focus:border-gray-700" value="{{theBook.Title}}" >
+
         </div>
   
         <div>
           <label class="block mb-1 font-bold text-gray-500">Name of the author</label>
-          <input type="text" ngModel name='author' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700">
+          <input type="text" ngModel name='author' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700" value="{{theBook.Author}}">
         </div>
   
         <div>
           <label class="block mb-1 font-bold text-gray-500">Image Url</label>
-          <input type="text" ngModel name='image' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700">
+          <input type="text" ngModel name='image' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700" value="{{theBook.image}}">
         </div>
         <div>
           <label class="block mb-1 font-bold text-gray-500">Short Description about the book</label>
-          <input type="text"  ngModel name='description' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700">
+          <input type="text"  ngModel name='description' class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-gray-700" value="{{theBook.Description}}">
         </div>
   
        <div class="flex">

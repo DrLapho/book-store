@@ -53,7 +53,9 @@ export class EditBookComponent implements OnInit {
 
   getTheBook() {
     this.service.getBook(this.getBookID).subscribe((data) => {
-      this.theBook = data;
+    this.theBook = data;
+    console.log(this.theBook.Title);
+    
     });
   }
 }

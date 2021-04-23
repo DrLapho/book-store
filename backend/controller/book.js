@@ -27,3 +27,10 @@ exports.editBook = (req, res) => {
     res.json(data);
   });
 };
+
+//get one book
+exports.getBook = (req,res)=>{
+  Book.findById(req.params.id).then((data)=>{
+    res.json(data);
+  })
+}
