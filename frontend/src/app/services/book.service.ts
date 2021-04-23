@@ -10,11 +10,14 @@ export class BookService {
     this.getBooks();
   }
 
-  addBook(data){
-    return this.httpClient.post(`${this.url}/books`, data).subscribe((data)=>{
-      console.log(data)
+  addBook(data) {
+    return this.httpClient.post(`${this.url}/books`, data).subscribe((data) => {
+      console.log(data);
     });
+  }
 
+  deleteBook(id) {
+    return this.httpClient.delete(`${this.url}/books/${id}`);
   }
 
   getBooks() {

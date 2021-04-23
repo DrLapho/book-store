@@ -44,7 +44,7 @@
               <span class="block text-gray-500 text-sm">{{book.Author}}</span>
             </div>
             <div class="m-4 flex float-right">
-              <span class="pr-4 cursor-pointer"
+              <span class="pr-4 cursor-pointer" (click)="deleteBook(book._id)"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6 text-red-600"

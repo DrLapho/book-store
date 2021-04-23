@@ -23,4 +23,10 @@ export class HomepageComponent implements OnInit {
       this.books = data;
     });
   }
+
+  deleteBook(id){
+    this.service.deleteBook(id).subscribe(()=>{
+      this.getBooks();
+    })
+  }
 }
