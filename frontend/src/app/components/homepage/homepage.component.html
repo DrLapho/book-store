@@ -1,5 +1,5 @@
 <body class="text-gray-600 font-body">
-  <div class="grid  h-screen">
+  <div class="grid h-screen">
     <!-- content wrapper -->
     <main class="px-16 py-6 bg-blue-300">
       <div class="flex justify-center md:justify-end">
@@ -25,8 +25,8 @@
           <div class="md:col-span-4" *ngIf="books == ''">
             <h3 class="text-gray-700 text-2xl font-semibold">
               Hello there unfortunately you don't have any books uploaded yet,
-              try adding some by clicking the "ADD BOOK" button at the top
-              right corner
+              try adding some by clicking the "ADD BOOK" button at the top right
+              corner
             </h3>
           </div>
           <div
@@ -34,15 +34,19 @@
             *ngFor="let book of books; let i = index"
           >
             <img
-              src={{book.image}}
+              src="{{ book.image }}"
               alt="bible"
               class="w-full h-32 sm:h-48 object-cover"
             />
-
-            <div class="m-4">
-              <span class="font-bold">{{book.Title}} </span>
-              <span class="block text-gray-500 text-sm">{{book.Author}}</span>
+            <div class="overflow-auto h-20 m-4">
+              <span class="font-bold">Description : </span
+              >{{ book.Description }}
             </div>
+            <div class="m-4">
+              <span class="font-bold">{{ book.Title }} </span>
+              <span class="block text-gray-500 text-sm">{{ book.Author }}</span>
+            </div>
+
             <div class="m-4 flex float-right">
               <span class="pr-4 cursor-pointer" (click)="deleteBook(book._id)"
                 ><svg
@@ -59,7 +63,7 @@
                     d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                   /></svg
               ></span>
-              <span class="cursor-pointer"  routerLink="/edit/{{book._id}}"
+              <span class="cursor-pointer" routerLink="/edit/{{ book._id }}"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
