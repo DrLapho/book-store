@@ -1,7 +1,5 @@
 # book-store
 
-# FIN Knowledge
-
 ## **Prerequisites**
 
 1. NodeJS from the [Official website](https://nodejs.org/en/)
