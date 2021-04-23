@@ -16,6 +16,8 @@ export class HomepageComponent implements OnInit {
   //Add 'implements OnInit' to the class.
   ngOnInit(): void {
     this.getBooks();
+   
+    
   }
 //Requesting all the books from the service 
   getBooks() {
