@@ -4,7 +4,6 @@
 
 1. NodeJS from the [Official website](https://nodejs.org/en/)
 2. MongoDB from the [Official website](https://docs.mongodb.com/manual/installation/)
-3. Rest API Client e.g [Postman](https://www.postman.com/downloads/)
 4. Run:
    > **node -v** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `To check if node is installed`
    
